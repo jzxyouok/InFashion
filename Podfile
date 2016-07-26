@@ -6,6 +6,7 @@
 target 'InFashion' do
 
 pod 'CYLTabBarController'
+pod 'Masonry'
 
 end
 

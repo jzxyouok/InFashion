@@ -1,10 +1,13 @@
 PODS:
   - CYLTabBarController (1.5.6)
+  - Masonry (1.0.1)
 
 DEPENDENCIES:
   - CYLTabBarController
+  - Masonry
 
 SPEC CHECKSUMS:
   CYLTabBarController: 5b7328765e6103e1776ae296b8e009a3da0e4c4b
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
 
 COCOAPODS: 0.39.0

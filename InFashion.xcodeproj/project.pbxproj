@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		278EEF34CF7324B1A7571C9E /* libPods-InFashion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3737415C28961810370293 /* libPods-InFashion.a */; };
 		30E2972A1D30F17B00BA01A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E297291D30F17B00BA01A2 /* AppDelegate.swift */; };
+		30E2AF131D436FDB00F9D44A /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E2AF111D436FDB00F9D44A /* DiscoverViewController.swift */; };
+		30E2AF141D436FDB00F9D44A /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30E2AF121D436FDB00F9D44A /* DiscoverViewController.xib */; };
+		30E2AF1D1D43716E00F9D44A /* AppConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E2AF1C1D43716E00F9D44A /* AppConst.swift */; };
 		30F4BD101D3267EF0028B989 /* CYLPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F4BD0F1D3267EF0028B989 /* CYLPlusButtonSubclass.m */; };
-		30F4BD221D326E060028B989 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4BD131D326E060028B989 /* DiscoverViewController.swift */; };
 		30F4BD231D326E060028B989 /* FollowTImeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4BD151D326E060028B989 /* FollowTImeLineViewController.swift */; };
 		30F4BD241D326E060028B989 /* InMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4BD171D326E060028B989 /* InMeViewController.swift */; };
 		30F4BD251D326E060028B989 /* UITabBarControllerConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4BD181D326E060028B989 /* UITabBarControllerConfigure.swift */; };
@@ -24,9 +26,11 @@
 		1EECED9F1C4E43202D83057D /* Pods-InFashion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InFashion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InFashion/Pods-InFashion.debug.xcconfig"; sourceTree = "<group>"; };
 		30E297261D30F17B00BA01A2 /* InFashion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InFashion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E297291D30F17B00BA01A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		30E2AF111D436FDB00F9D44A /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		30E2AF121D436FDB00F9D44A /* DiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverViewController.xib; sourceTree = "<group>"; };
+		30E2AF1C1D43716E00F9D44A /* AppConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConst.swift; sourceTree = "<group>"; };
 		30F4BD0E1D3267EF0028B989 /* CYLPlusButtonSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLPlusButtonSubclass.h; sourceTree = "<group>"; };
 		30F4BD0F1D3267EF0028B989 /* CYLPlusButtonSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLPlusButtonSubclass.m; sourceTree = "<group>"; };
-		30F4BD131D326E060028B989 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		30F4BD151D326E060028B989 /* FollowTImeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowTImeLineViewController.swift; sourceTree = "<group>"; };
 		30F4BD171D326E060028B989 /* InMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMeViewController.swift; sourceTree = "<group>"; };
 		30F4BD181D326E060028B989 /* UITabBarControllerConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabBarControllerConfigure.swift; sourceTree = "<group>"; };
@@ -76,9 +80,50 @@
 				30F4BD1B1D326E060028B989 /* ProjectBase */,
 				30F4BD201D326E060028B989 /* Resource */,
 				30F4BD0D1D3267EF0028B989 /* PublicView */,
+				30E2AF151D43713000F9D44A /* Extension */,
 				30E297291D30F17B00BA01A2 /* AppDelegate.swift */,
 			);
 			path = InFashion;
+			sourceTree = "<group>";
+		};
+		30E2AF151D43713000F9D44A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				30E2AF161D43713000F9D44A /* Const */,
+				30E2AF171D43713000F9D44A /* Helper */,
+				30E2AF181D43713000F9D44A /* Macros */,
+				30E2AF191D43713000F9D44A /* Utility */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		30E2AF161D43713000F9D44A /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				30E2AF1C1D43716E00F9D44A /* AppConst.swift */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		30E2AF171D43713000F9D44A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		30E2AF181D43713000F9D44A /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		30E2AF191D43713000F9D44A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		30F4BD0D1D3267EF0028B989 /* PublicView */ = {
@@ -93,10 +138,10 @@
 		30F4BD111D326E060028B989 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				30F4BD181D326E060028B989 /* UITabBarControllerConfigure.swift */,
 				30F4BD121D326E060028B989 /* DiscoverModule */,
 				30F4BD141D326E060028B989 /* FollowTimeLineModule */,
 				30F4BD161D326E060028B989 /* InMeModule */,
-				30F4BD181D326E060028B989 /* UITabBarControllerConfigure.swift */,
 				30F4BD191D326E060028B989 /* UserCenter */,
 			);
 			path = MainModule;
@@ -105,7 +150,8 @@
 		30F4BD121D326E060028B989 /* DiscoverModule */ = {
 			isa = PBXGroup;
 			children = (
-				30F4BD131D326E060028B989 /* DiscoverViewController.swift */,
+				30E2AF111D436FDB00F9D44A /* DiscoverViewController.swift */,
+				30E2AF121D436FDB00F9D44A /* DiscoverViewController.xib */,
 			);
 			path = DiscoverModule;
 			sourceTree = "<group>";
@@ -233,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F4BD281D326E060028B989 /* Info.plist in Resources */,
+				30E2AF141D436FDB00F9D44A /* DiscoverViewController.xib in Resources */,
 				30F4BD291D326E060028B989 /* Assets.xcassets in Resources */,
 				30F4BD271D326E060028B989 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -294,8 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F4BD251D326E060028B989 /* UITabBarControllerConfigure.swift in Sources */,
-				30F4BD221D326E060028B989 /* DiscoverViewController.swift in Sources */,
+				30E2AF1D1D43716E00F9D44A /* AppConst.swift in Sources */,
 				30F4BD241D326E060028B989 /* InMeViewController.swift in Sources */,
+				30E2AF131D436FDB00F9D44A /* DiscoverViewController.swift in Sources */,
 				30F4BD261D326E060028B989 /* UserCenterViewController.swift in Sources */,
 				30E2972A1D30F17B00BA01A2 /* AppDelegate.swift in Sources */,
 				30F4BD231D326E060028B989 /* FollowTImeLineViewController.swift in Sources */,
