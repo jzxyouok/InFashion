@@ -1,13 +1,18 @@
 PODS:
   - CYLTabBarController (1.5.6)
   - Masonry (1.0.1)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
 
 DEPENDENCIES:
   - CYLTabBarController
   - Masonry
+  - SDWebImage
 
 SPEC CHECKSUMS:
   CYLTabBarController: 5b7328765e6103e1776ae296b8e009a3da0e4c4b
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
 
 COCOAPODS: 0.39.0

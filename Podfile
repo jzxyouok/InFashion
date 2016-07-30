@@ -7,6 +7,7 @@ target 'InFashion' do
 
 pod 'CYLTabBarController'
 pod 'Masonry'
+pod 'SDWebImage'
 
 end
 

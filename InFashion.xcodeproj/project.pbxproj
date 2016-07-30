@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		278EEF34CF7324B1A7571C9E /* libPods-InFashion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3737415C28961810370293 /* libPods-InFashion.a */; };
+		306909411D48F56A00B0F904 /* discover_hot.json in Resources */ = {isa = PBXBuildFile; fileRef = 306909401D48F56A00B0F904 /* discover_hot.json */; };
+		306909451D48FBBB00B0F904 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306909441D48FBBB00B0F904 /* SwiftyJSON.swift */; };
+		30743F2C1D4C395100B24D6A /* DiscoverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30743F2B1D4C395100B24D6A /* DiscoverCollectionViewCell.swift */; };
 		30E2972A1D30F17B00BA01A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E297291D30F17B00BA01A2 /* AppDelegate.swift */; };
 		30E2AF131D436FDB00F9D44A /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E2AF111D436FDB00F9D44A /* DiscoverViewController.swift */; };
 		30E2AF141D436FDB00F9D44A /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30E2AF121D436FDB00F9D44A /* DiscoverViewController.xib */; };
@@ -24,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		1EECED9F1C4E43202D83057D /* Pods-InFashion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InFashion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InFashion/Pods-InFashion.debug.xcconfig"; sourceTree = "<group>"; };
+		306909401D48F56A00B0F904 /* discover_hot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = discover_hot.json; sourceTree = "<group>"; };
+		306909441D48FBBB00B0F904 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		30743F2B1D4C395100B24D6A /* DiscoverCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewCell.swift; sourceTree = "<group>"; };
 		30E297261D30F17B00BA01A2 /* InFashion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InFashion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E297291D30F17B00BA01A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30E2AF111D436FDB00F9D44A /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +61,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3069093F1D48F55A00B0F904 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				306909401D48F56A00B0F904 /* discover_hot.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		306909431D48FB8100B0F904 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				306909441D48FBBB00B0F904 /* SwiftyJSON.swift */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		30743F2A1D4C38FE00B24D6A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30743F2B1D4C395100B24D6A /* DiscoverCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		30E2971D1D30F17900BA01A2 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +111,8 @@
 				30F4BD201D326E060028B989 /* Resource */,
 				30F4BD0D1D3267EF0028B989 /* PublicView */,
 				30E2AF151D43713000F9D44A /* Extension */,
+				306909431D48FB8100B0F904 /* Vender */,
+				3069093F1D48F55A00B0F904 /* Data */,
 				30E297291D30F17B00BA01A2 /* AppDelegate.swift */,
 			);
 			path = InFashion;
@@ -150,6 +182,7 @@
 		30F4BD121D326E060028B989 /* DiscoverModule */ = {
 			isa = PBXGroup;
 			children = (
+				30743F2A1D4C38FE00B24D6A /* View */,
 				30E2AF111D436FDB00F9D44A /* DiscoverViewController.swift */,
 				30E2AF121D436FDB00F9D44A /* DiscoverViewController.xib */,
 			);
@@ -280,6 +313,7 @@
 			files = (
 				30F4BD281D326E060028B989 /* Info.plist in Resources */,
 				30E2AF141D436FDB00F9D44A /* DiscoverViewController.xib in Resources */,
+				306909411D48F56A00B0F904 /* discover_hot.json in Resources */,
 				30F4BD291D326E060028B989 /* Assets.xcassets in Resources */,
 				30F4BD271D326E060028B989 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -344,8 +378,10 @@
 				30E2AF1D1D43716E00F9D44A /* AppConst.swift in Sources */,
 				30F4BD241D326E060028B989 /* InMeViewController.swift in Sources */,
 				30E2AF131D436FDB00F9D44A /* DiscoverViewController.swift in Sources */,
+				30743F2C1D4C395100B24D6A /* DiscoverCollectionViewCell.swift in Sources */,
 				30F4BD261D326E060028B989 /* UserCenterViewController.swift in Sources */,
 				30E2972A1D30F17B00BA01A2 /* AppDelegate.swift in Sources */,
+				306909451D48FBBB00B0F904 /* SwiftyJSON.swift in Sources */,
 				30F4BD231D326E060028B989 /* FollowTImeLineViewController.swift in Sources */,
 				30F4BD101D3267EF0028B989 /* CYLPlusButtonSubclass.m in Sources */,
 			);
