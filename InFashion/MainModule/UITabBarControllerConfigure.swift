@@ -38,6 +38,7 @@ class UITabBarControllerConfigure: NSObject {
         tabBar.backgroundColor = UIColor.white()
         tabBar.shadowImage = UIImage.init(named: "tapbar_top_line")
         
+        
         return tabBarVC!
     }
     

@@ -44,7 +44,15 @@ class DiscoverViewController: UIViewController {
         view.backgroundColor = UIColor.white()
         collectionView.backgroundColor = UIColor.white()
         collectionView.register(DiscoverCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: NSStringFromClass(DiscoverCollectionViewCell.classForCoder()))
+        collectionView.register(DiscoverCollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier:  NSStringFromClass(DiscoverCollectionReusableView.classForCoder()))
+        
+        let edgeConst = CGFloat(2.5)
+        
         flowLayout.sectionHeadersPinToVisibleBounds = true
+        flowLayout.itemSize = CGSize(width: 103.3333, height: 103.3333)
+        flowLayout.sectionInset = UIEdgeInsetsMake(edgeConst, edgeConst, edgeConst, edgeConst)
+        flowLayout.minimumInteritemSpacing = edgeConst
+        flowLayout.minimumLineSpacing = edgeConst
         self.navigationItem.titleView = self.searchBar
     }
     
@@ -68,11 +76,12 @@ extension DiscoverViewController: UISearchBarDelegate{
     }
 }
 
-extension DiscoverViewController: UICollectionViewDelegate{
-    
-}
+//extension DiscoverViewController: UICollectionViewDelegate{
+//    
+//    
+//}
 
-extension DiscoverViewController: UICollectionViewDataSource{
+extension DiscoverViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (hotData.count)
     }
@@ -85,8 +94,23 @@ extension DiscoverViewController: UICollectionViewDataSource{
             }
         }
         
-
-        
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let reuseableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(DiscoverCollectionReusableView.classForCoder()), for: indexPath)
+        
+        reuseableView.backgroundColor = UIColor.green()
+        
+        return reuseableView
+        
+    }
 }
+
+extension DiscoverViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: kScreenWidth, height: 50)
+    }
+}
+

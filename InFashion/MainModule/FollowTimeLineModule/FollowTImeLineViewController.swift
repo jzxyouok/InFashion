@@ -13,7 +13,7 @@ class FollowTImeLineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.white()
+        self.view.backgroundColor = UIColor.yellow()
         
         self.title = "关注"
         
